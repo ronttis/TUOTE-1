@@ -18,7 +18,7 @@ function H = measureStereoIR(duration)
 
     % Generate a test signal
     t_iter = 0:1/fs:1;                                          % Time vector
-    y_iter = chirp(t_iter, f_start, 1, f_stop,'logarithmic')/4;               % Sweep from f_start to f_stop
+    y_iter = chirp(t_iter, f_start, 1, f_stop,'logarithmic')/4; % Sweep from f_start to f_stop
     y_iter = [zeros(fs/4,1)' y_iter, zeros(fs/4,1)']';          % Add zeros to start and end 
 
     scale = 1;              % Volume scaling coefficient
@@ -42,7 +42,7 @@ function H = measureStereoIR(duration)
 
     % Generate the signal
     t = 0:1/fs:duration;                                            % Time vector for excitation signal
-    x = chirp(t, f_start, duration, f_stop,'logarithmic')/4;                      % Excitation signal
+    x = chirp(t, f_start, duration, f_stop,'logarithmic')/4;        % Excitation signal
     x = [zeros(fs/4,1)' x, zeros(fs,1)']';                          % Add zeros
     x = scale.*x;                                                   % Scale the signal level
 

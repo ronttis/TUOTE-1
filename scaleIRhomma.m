@@ -7,8 +7,10 @@ function H = scaleIR(scale, H)
     %
     % Output:
     %       H       Scaled impulse response
-	% Kusinen pasfwafwaka...    
-    
+
+	%ddawd
+
+
     fs = 192000;                % Sample rate
     H = resample(H,scale,1);    % Resamples the implulse response
 
